@@ -78,7 +78,7 @@ class Endboss extends MovableObject {
     animate() {
         let frameCounter = 0;
         let deadAnimationTriggered = false;
-        const animationInterval = 200;
+        const animationInterval = 400;
         setInterval(() => {
             if (deadAnimationTriggered) return;
             if (frameCounter < 8) this.playAnimation(this.IMAGES_ENDBOSS_SPAWNING);
@@ -91,6 +91,7 @@ class Endboss extends MovableObject {
             if (this.isDead()) {
                 this.ifDeadAnimation();
                 deadAnimationTriggered = true;
+                this.loadImg(this.IMAGES_ENDBOSS_DEAD[2]);
                 return;
             }
             frameCounter++;
@@ -155,7 +156,7 @@ class Endboss extends MovableObject {
             } else {
                 clearInterval(this.deadAnimationInterval);
             }
-        }, 100);
+        }, 200);
         this.gameOver = true;
     }
 

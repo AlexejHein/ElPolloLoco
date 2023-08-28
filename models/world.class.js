@@ -361,6 +361,7 @@ class World {
      * @param bar
      */
     updateBar(bar) {
+        if(bar.collected >= 100) return;
         bar.collected += 20;
         bar.setPercentage(bar.collected);
         bar.COLLECTING_SOUND.volume = playSoundVolume();
@@ -392,9 +393,11 @@ class World {
             return;
         }
         collectiblesArray.forEach((collectible) => {
+            if (this.bottlesBar.collected >= 100) return;
             if (this.character.isColliding(collectible)) {
                 this.updateBar(bar);
                 this.deleteAfterCollected(collectiblesArray, collectible);
+
                 this.handleBottleCollection(collectiblesArray);
             }
         });

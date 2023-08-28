@@ -47,18 +47,6 @@ canvas {
     z-index: 12;
 }
 
-@media only screen and (max-width:720px) {
-    canvas {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-height:480px) {
-    canvas {
-        height: 100vh;
-    }
-}
-
 .intro-outro {
     height: 480px;
     position: absolute;
@@ -166,6 +154,14 @@ i{
 .top button {
     height: 90px;
     width: 90px;
+}
+
+button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
 }
 .overlay-bottom {
     display: flex;
@@ -311,7 +307,7 @@ i{
         display: none !important;
     }
 }
-@media (max-width: 720px){
+@media (max-width: 740px){
     canvas{
         width: 100%;
     }

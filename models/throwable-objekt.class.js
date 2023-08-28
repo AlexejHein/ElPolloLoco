@@ -66,7 +66,7 @@ class ThrowableObjects extends MovableObject {
             this.x -= 5;
             this.playAnimation(this.IMAGES)
         }else{
-            this.x += 5;
+            this.x += 5.5;
             this.playAnimation(this.IMAGES)
         }
         if (this.bottleDestroyed) this.splash();

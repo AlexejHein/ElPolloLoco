@@ -200,10 +200,10 @@ function detectPhonePosition() {
 function addResponsiveDesign(){
     if (window.innerWidth < 740) {
         document.getElementById('tutorial').classList.add('d-none');
-        if (window.matchMedia("(orientation: landscape)").matches && window.innerWidth < 720) {
+        if (window.matchMedia("(orientation: landscape)").matches && window.innerWidth < 740) {
             document.getElementById('overlay-bottom').classList.remove('d-none');
 
-        } else if (window.matchMedia("(orientation: portrait)").matches && window.innerWidth < 720) {
+        } else if (window.matchMedia("(orientation: portrait)").matches && window.innerWidth < 740) {
             document.getElementById('overlay-bottom').classList.add('d-none');
             document.getElementById('rotate-device').classList.remove('d-none');
         }
