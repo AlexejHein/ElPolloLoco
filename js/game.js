@@ -42,6 +42,7 @@ function init() {
     detectPhonePosition();
     loadDesktopControlEvents();
     loadMobileControlEvents();
+    addResponsiveDesign();
 }
 
 /**
@@ -198,7 +199,7 @@ function detectPhonePosition() {
  * @description adds the responsive design
  */
 function addResponsiveDesign(){
-    if (window.innerWidth < 740) {
+    if (window.innerWidth < 740 && window.innerHeight < 480) {
         document.getElementById('tutorial').classList.add('d-none');
         if (window.matchMedia("(orientation: landscape)").matches && window.innerWidth < 740) {
             document.getElementById('overlay-bottom').classList.remove('d-none');
@@ -257,6 +258,9 @@ function showYouWonScreen() {
  * @description restarts the game
  */
 function restartGame() {
-    location.reload();
+    console.log('restart');
+    window.location.reload();
 }
+
+
 
